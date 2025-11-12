@@ -54,13 +54,16 @@ group :development, :test do
   gem "rspec-rails", "~> 8.0.0"
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', '~> 12.0', platforms: %i[mri mingw x64_mingw]
+  gem "byebug", "~> 12.0", platforms: %i[mri mingw x64_mingw]
 
   # Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
-  gem 'pry-byebug', '~> 3.11'
+  gem "pry-byebug", "~> 3.11"
 
   # Autoload dotenv in Rails.
-  gem 'dotenv-rails', '~> 3.1', '>= 3.1.8'
+  gem "dotenv-rails", "~> 3.1", ">= 3.1.8"
+
+  # factory_bot is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies (saved
+  gem "factory_bot_rails", "~> 6.5", ">= 6.5.1"
 end
 
 group :development do
