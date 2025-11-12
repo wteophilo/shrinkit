@@ -49,6 +49,18 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # RSpec for Rails [https://rspec.info/documentation/]
+  gem "rspec-rails", "~> 8.0.0"
+
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', '~> 12.0', platforms: %i[mri mingw x64_mingw]
+
+  # Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
+  gem 'pry-byebug', '~> 3.11'
+
+  # Autoload dotenv in Rails.
+  gem 'dotenv-rails', '~> 3.1', '>= 3.1.8'
 end
 
 group :development do
