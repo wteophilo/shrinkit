@@ -1,0 +1,9 @@
+<%= form_with model: @url do |form| %>
+  <div>
+    <%= form.label t("urls.form.long_url") %>
+    <%= form.text_field :long_url%>
+  </div>
+  <div>
+    <%= form.submit t("urls.form.submit"), class: "btn btn-primary" %>
+  </div>
+<% end %>

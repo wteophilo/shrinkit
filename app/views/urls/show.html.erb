@@ -1,0 +1,6 @@
+<p><%= link_to t("urls.new.back"), url_for(action: "new") %></p>
+
+<section class="url-info">
+  <p> Long URL:</p> <%= @url.long_url %>
+  <p> Short URL:</p> <%= @url.short_code %>
+</section>

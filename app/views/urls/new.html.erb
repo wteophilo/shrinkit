@@ -1,0 +1,11 @@
+<p><%= link_to t("urls.new.back"), urls_path %></p>
+
+<h1><%= t("urls.new.new_url")%></h1>
+<section class="container">
+  <p><%= t("urls.new.text") %></p>
+  <%= render "form", url: @url %>
+</section>
+
+
+
+

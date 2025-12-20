@@ -1,0 +1,9 @@
+<h1><%=t "urls.index.title"%></h1>
+<div id="urls-list">
+  <% @urls.each do |url| %>
+    <div class="url-item">
+      <a href="/urls/<%= url.id %>">
+        <%= url.long_url %>
+    </div>
+  <% end %>
+</div>

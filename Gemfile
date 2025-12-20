@@ -49,6 +49,15 @@ gem 'hashids', "~> 1.0.6"
 # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
 gem 'bootstrap', '~> 5.3', '>= 5.3.5'
 
+# This gem provides popper.js assets as a Ruby gem.
+gem 'popper_js', '~> 2.11.8'
+
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application.
+gem 'jquery-rails', '~> 4.6', '>= 4.6.1'
+
+# Integrate Dart Sass with the asset pipeline in Rails.
+gem 'dartsass-rails', '~> 0.5.1'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
