@@ -28,4 +28,14 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  urls:
+    title: "ShrinkIt - Free URL Shortener"
+    form:
+      long_url: "Url"
+      back: "Back"
+      submit: "Shnrink Url"
+    new:
+      long_url: "Url"
+      back: "Back"
+      new_url: "New Url"
+      text: "Transform your long links into something elegant and perfect for sharing on WhatsApp, YouTube, TikTok, Instagram and more. Try our free link shortener and simplify your online presence."

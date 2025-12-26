@@ -1,0 +1,14 @@
+pt-br:
+  urls:
+    title: "ShrinkIt - Encurtador de URL Grátis"
+    form:
+      long_url: "Url"
+      back: "Voltar"
+      submit: "Encurtar"
+      input: "Cole sua URL longa aqui. Ex: https://exemplo.com/um-link-muito-longo"
+    new:
+      long_url: "Url"
+      back: "Voltar"
+      new_url: "Nova Url"
+      submit: "Encurtar"
+      text: "Transforme seus links longos em algo elegante e perfeito para compartilhar no WhatsApp, YouTube, TikTok, Instagram e mais. Experimente nosso encurtador de link grátis e simplifique sua presença online."
