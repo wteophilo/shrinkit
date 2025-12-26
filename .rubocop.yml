@@ -13,6 +13,9 @@ AllCops:
     - db/schema.rb
   TargetRubyVersion: 3.4.6
 
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 

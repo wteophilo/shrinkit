@@ -43,6 +43,9 @@ gem "thruster", require: false
 # Base62 monkeypatches Integer to add an Integer#base62_encode instance method to encode an integer in the character set of 0-9 + A-Z + a-
 gem "base62", "~> 1.0"
 
+# Generate short, unique, non-sequential ids from numbers.
+gem "hashids", "~> 1.0.6"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
