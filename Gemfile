@@ -63,7 +63,7 @@ group :development, :test do
   gem "pry-byebug", "~> 3.11"
 
   # Autoload dotenv in Rails.
-  gem "dotenv-rails", "~> 3.1", ">= 3.1.8"
+  gem "dotenv-rails", "~> 3.2"
 
   # factory_bot is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies (saved
   gem "factory_bot_rails", "~> 6.5", ">= 6.5.1"
