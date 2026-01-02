@@ -24,6 +24,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav><%= t("urls.title") %></nav>
+    </header>
+    <main
+      <%= yield %>
+    </main>
+    <footer>
+      <p>Willian Teophilo's website.</p>
+    </footer>
   </body>
+
 </html>
