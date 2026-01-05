@@ -1,12 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "Urls", type: :request do
+RSpec.describe "UrlsController", type: :request do
   # Create a valid record to be used in show/redirect tests
   let!(:url_record) { Url.create!(long_url: "https://google.com", short_code: "abc") }
 
   # Attributes for the create action
   let(:valid_attributes) { { url: { long_url: "https://github.com" } } }
   let(:invalid_attributes) { { url: { long_url: "" } } }
+
 
   describe "GET /index" do
     it "returns a successful response and lists the URLs" do
