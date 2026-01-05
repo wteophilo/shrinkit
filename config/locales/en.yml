@@ -39,3 +39,9 @@ en:
       back: "Back"
       new_url: "New Url"
       text: "Transform your long links into something elegant and perfect for sharing on WhatsApp, YouTube, TikTok, Instagram and more. Try our free link shortener and simplify your online presence."
+    show:
+      redirecting: "Your URL has been successfully shrunk!"
+      error: "URL not found."
+      long_url: "Original Url"
+      short_url: "Shrunk Url"
+      new: "Shrink Another URL"

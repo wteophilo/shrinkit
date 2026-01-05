@@ -1,7 +1,12 @@
 <%= form_with model: @url do |form| %>
-  <p>
+  <div class="container">
     <%= form.label t("urls.form.long_url") %>
     <%= form.text_field :long_url%>
-    <%= form.submit t("urls.form.submit"), class: "btn btn-primary" %>
-  </p>
+    <% if @url.errors[:long_url].any? %>
+      <h6><%= @url.errors[:long_url].first %></h6>
+    <% end %>
+    <div class="container">
+      <%= form.submit t("urls.form.submit"), class: "btn btn-primary" %>
+    </div>
+  </div>
 <% end %>

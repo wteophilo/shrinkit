@@ -1,0 +1,20 @@
+<h1><%=t "urls.index.title"%></h1>
+<div id="urls-list" class="container">
+  <% @urls.each do |url| %>
+    <div class="container">
+    <li>
+      <p>ID:
+      <a href="/urls/<%= url.id %>">
+            <%= url.id %></a>
+      </a></p>
+      <p>Url: <%= url.long_url %></p>
+      <p>Code: <%= url.short_code %></p>
+      <p>Shortened:
+        <a href="/urls/redirect/<%= url.short_code %>">
+          <%= request.base_url%>/<%= url.short_code %>
+        </a>
+      </p>
+      </li>
+    </div>
+  <% end %>
+</div>

@@ -12,3 +12,9 @@ pt-br:
       new_url: "Nova Url"
       submit: "Encurtar"
       text: "Transforme seus links longos em algo elegante e perfeito para compartilhar no WhatsApp, YouTube, TikTok, Instagram e mais. Experimente nosso encurtador de link grátis e simplifique sua presença online."
+    show:
+      redirecting: "Sua URL foi encurtada com sucesso!"
+      error: "URL não encontrada."
+      long_url: "Url Original "
+      short_url: "Url Encurtada"
+      new: "Encurtar Outra URL"
