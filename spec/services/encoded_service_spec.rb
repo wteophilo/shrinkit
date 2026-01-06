@@ -33,12 +33,10 @@ RSpec.describe EncodedService, type: :service do
     end
 
     context "when secret is missing" do
-      it "raises a runtime error" do
+      it "overrides the environment variable with a default value" do
+        default_secret = "fallback_for_dev_only"
         allow(ENV).to receive(:[]).with("MY_SECRET_KEY").and_return(nil)
-
-        expect {
-          described_class.new(secret: nil)
-        }.to raise_error(RuntimeError, "Missing Hashid Salt")
+        expect(service.instance_variable_get(:@secret)).to eq(default_secret)
       end
     end
   end

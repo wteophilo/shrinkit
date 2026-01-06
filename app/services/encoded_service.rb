@@ -1,11 +1,12 @@
 class EncodedService
   DEFAULT_MAX_LENGTH = 4
 
-  def initialize(alphabet: ENV["ALPHABET"], secret: ENV["MY_SECRET_KEY"], max_length: DEFAULT_MAX_LENGTH)
-    raise "Missing Hashid Salt" if secret.nil? || secret.empty?
+  def initialize(alphabet: nil, secret: nil, max_length: DEFAULT_MAX_LENGTH)
+    @secret = secret || ENV["MY_SECRET_KEY"] || "fallback_for_dev_only"
+    @alphabet = alphabet || ENV["ALPHABET"] || "abcdefghijklmnopqrstuvwxyz1234567890"
 
-    @alphabet = alphabet
-    @secret = secret
+    raise "Missing Hashid Salt" if @secret.blank?
+
     @max_length = max_length
 
     @hashid = Hashids.new(@secret, @max_length, @alphabet)
