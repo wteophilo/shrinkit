@@ -3,7 +3,7 @@
     {
       "warning_type": "Redirect",
       "warning_code": 18,
-      "fingerprint": "7573d8750800c732483864f16421375d31a547432f5f190240d12643a6d713c2",
+      "fingerprint": "c1c88bc049e310f67a878dec8ce56bc62caa85b2beb6d67670009867acd2ff3f",
       "check_name": "Redirect",
       "message": "Possible unprotected redirect",
       "file": "app/controllers/urls_controller.rb",
@@ -18,9 +18,11 @@
       },
       "user_input": "Url.find_by!(:short_code => params[:short_code]).long_url",
       "confidence": "Weak",
-      "note": "Validação de protocolo HTTP/HTTPS aplicada no model via UrlValidator."
+      "cwe_id": [
+        601
+      ],
+      "note": ""
     }
   ],
-  "updated": "2026-01-06 14:15:00 -0300",
   "brakeman_version": "7.1.2"
 }
