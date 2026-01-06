@@ -45,3 +45,15 @@ en:
       long_url: "Original Url"
       short_url: "Shrunk Url"
       new: "Shrink Another URL"
+  activemodel:
+    errors:
+      models:
+        url:
+          attributes:
+            long_url:
+              invalid_protocol: "Must use HTTP or HTTPS protocol"
+              invalid_url_format: "Has an invalid format"
+  errors:
+    messages:
+      invalid_protocol: "It's not a supported protocol"
+      invalid_url_format: "has an invalid format"

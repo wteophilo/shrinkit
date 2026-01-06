@@ -1,6 +1,5 @@
 class UrlsController < ApplicationController
   before_action :set_url, only: %i[show]
-  before_action :set_url_by_code, only: %i[redirect]
 
   def index
     @urls = Url.all
@@ -21,11 +20,10 @@ class UrlsController < ApplicationController
   end
 
   def redirect
-    if @url
-      redirect_to @url.long_url, allow_other_host: true
-    else
-      render plain: t("urls.show.error"), status: :not_found
-    end
+    @url = Url.find_by!(short_code: params[:short_code])
+    redirect_to @url.long_url, allow_other_host: true
+  rescue ActiveRecord::RecordNotFound
+    render plain: t("urls.show.error"), status: :not_found
   end
 
  private
@@ -41,9 +39,5 @@ class UrlsController < ApplicationController
 
   def set_url
     @url = Url.find(params[:id])
-  end
-
-  def set_url_by_code
-    @url = Url.find_by(short_code: params[:short_code])
   end
 end

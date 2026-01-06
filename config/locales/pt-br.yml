@@ -18,3 +18,15 @@ pt-br:
       long_url: "Url Original "
       short_url: "Url Encurtada"
       new: "Encurtar Outra URL"
+  activemodel:
+    errors:
+      models:
+        url:
+          attributes:
+            long_url:
+              invalid_protocol: "deve utilizar o protocolo HTTP ou HTTPS"
+              invalid_url_format: "está com um formato inválido"
+  errors:
+    messages:
+      invalid_protocol: "não é um protocolo suportado"
+      invalid_url_format: "formato de URL inválido"
