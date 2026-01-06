@@ -50,7 +50,6 @@ RSpec.describe UrlValidator do
     let(:url) { 'invalid-url-format' }
     it 'adds the invalid_url_format error' do
       expect(subject).not_to be_valid
-
     end
   end
 end

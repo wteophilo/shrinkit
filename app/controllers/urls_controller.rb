@@ -12,7 +12,7 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(url_params)
     @url.short_code = generate_short_code
-    return render :new, status: :unprocessable_entity unless @url.save
+    return render :new, status: :unprocessable_content unless @url.save
     redirect_to @url
   end
 

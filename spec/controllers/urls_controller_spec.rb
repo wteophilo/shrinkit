@@ -49,12 +49,12 @@ RSpec.describe "UrlsController", type: :request do
     end
 
     context "with invalid parameters" do
-      it "does not create a new Url and returns unprocessable_entity" do
+      it "does not create a new Url and returns unprocessable content" do
         expect {
           post urls_path, params: invalid_attributes
         }.to change(Url, :count).by(0)
 
-        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response).to have_http_status(:unprocessable_content)
       end
     end
   end
