@@ -11,7 +11,6 @@ class UrlsController < ApplicationController
 
   def create
     @url = Url.new(url_params)
-    @url.short_code = generate_short_code
     return render :new, status: :unprocessable_content unless @url.save
     redirect_to @url
   end
@@ -30,11 +29,6 @@ class UrlsController < ApplicationController
 
   def url_params
     params.expect(url: [ :long_url, :short_code ])
-  end
-
-  def generate_short_code
-    next_id = Url.count + 1
-    EncodedService.new.encode(next_id)
   end
 
   def set_url
