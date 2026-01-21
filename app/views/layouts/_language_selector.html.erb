@@ -1,0 +1,3 @@
+<%= form_with url: root_path, method: :get do |f| %>
+  <%= f.select :locale, options_for_select([['English', 'en'], ['Português', 'pt-BR']], I18n.locale.to_s), {}, { onchange: "this.form.submit()" } %>
+<% end %>

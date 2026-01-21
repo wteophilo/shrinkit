@@ -1,6 +1,7 @@
-pt-br:
+pt-BR:
   urls:
     title: "ShrinkIt - Encurtador de URL Grátis"
+    footer: Willian Teophilo website
     form:
       long_url: "Url"
       back: "Voltar"
