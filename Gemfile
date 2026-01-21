@@ -60,7 +60,7 @@ group :development, :test do
   gem "rspec-rails", "~> 8.0.0"
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem "byebug", "~> 12.0", platforms: %i[mri mingw x64_mingw]
+  gem "byebug", "~> 13.0", platforms: %i[mri mingw x64_mingw]
 
   # Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
   gem "pry-byebug", "~> 3.11"
