@@ -28,5 +28,9 @@ module Shrinkit
       g.test_framework :rspec
       g.integration_tool :rspec
     end
+
+    # Internationalization
+    config.i18n.available_locales = [ :en, :"pt-BR" ]
+    config.i18n.default_locale = :en
   end
 end

@@ -26,12 +26,13 @@
   <body>
     <header>
       <nav><%= t("urls.title") %></nav>
+      <%= render 'layouts/language_selector' %>
     </header>
     <main
       <%= yield %>
     </main>
     <footer>
-      <p>Willian Teophilo's website.</p>
+      <p><%= t("urls.footer") %></p>
     </footer>
   </body>
 

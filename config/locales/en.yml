@@ -30,6 +30,7 @@
 en:
   urls:
     title: "ShrinkIt - Free URL Shortener"
+    footer: Willian Teophilo's website
     form:
       long_url: "Url"
       back: "Back"
