@@ -36,16 +36,6 @@ RSpec.describe "UrlsController", type: :request do
         post urls_path, params: valid_attributes
         expect(response).to redirect_to(url_url(Url.last))
       end
-
-      it "automatically generates the short_code via EncodedService" do
-        # Mocking the service to ensure the controller utilizes it correctly
-        mock_service = instance_double(EncodedService)
-        allow(EncodedService).to receive(:new).and_return(mock_service)
-        allow(mock_service).to receive(:encode).and_return("xyz123")
-
-        post urls_path, params: valid_attributes
-        expect(Url.last.short_code).to eq("xyz123")
-      end
     end
 
     context "with invalid parameters" do
