@@ -56,19 +56,5 @@ RSpec.describe Url, type: :model do
         expect { url.valid? }.not_to raise_error
       end
     end
-
-    context "after_create" do
-      it "generates and saves the short_code based on model id" do
-        service_spy = instance_double(EncodedService)
-        allow(EncodedService).to receive(:new).and_return(service_spy)
-        allow(service_spy).to receive(:encode).and_return("abc123")
-
-        url = FactoryBot.build(:url, long_url: "https://a-long-but-valid-url.com/path")
-
-        expect { url.save }.to change { url.short_code }.from(nil).to("abc123")
-
-        expect(service_spy).to have_received(:encode).with(url.id)
-      end
-    end
   end
 end

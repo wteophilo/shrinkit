@@ -10,19 +10,26 @@ class UrlsController < ApplicationController
   end
 
   def create
-    @url = Url.new(url_params)
-    return render :new, status: :unprocessable_content unless @url.save
-    redirect_to @url
+    result = Urls::Create.new(url_params).call
+    if result.success?
+      redirect_to result.value
+    else
+      @url = Url.new(url_params)
+      @url.errors.add(:base, result.errors.join(", "))
+      render :new, status: :unprocessable_content
+    end
   end
 
   def show
   end
 
   def redirect
-    @url = Url.find_by!(short_code: params[:short_code])
-    redirect_to @url.long_url, allow_other_host: true
-  rescue ActiveRecord::RecordNotFound
-    render plain: t("urls.show.error"), status: :not_found
+    result = Urls::FindShortCode.new(params[:short_code]).call
+    if result.success?
+      redirect_to result.value.long_url, allow_other_host: true
+    else
+      render plain: result.errors.join(", "), status: :not_found
+    end
   end
 
  private

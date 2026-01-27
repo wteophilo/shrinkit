@@ -1,4 +1,4 @@
-class EncodedService
+class Encode
   DEFAULT_MAX_LENGTH = 4
 
   def initialize(alphabet: nil, secret: nil, max_length: DEFAULT_MAX_LENGTH)
@@ -12,11 +12,7 @@ class EncodedService
     @hashid = Hashids.new(@secret, @max_length, @alphabet)
   end
 
-  def encode(long_url)
-    @hashid.encode(long_url)
-  end
-
-  def decode(long_url)
-    @hashid.decode(long_url)
+  def generate(id)
+    @hashid.encode(id)
   end
 end
