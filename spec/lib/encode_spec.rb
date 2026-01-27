@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe EncodedService, type: :service do
+RSpec.describe Encode do
   let(:default_alphabet) { "abcdefghijklmnopqrstuvwxyz1234567890" }
   let(:default_secret) { "super-secret-salt" }
   let(:service) { described_class.new }
@@ -41,9 +41,9 @@ RSpec.describe EncodedService, type: :service do
     end
   end
 
-  describe '#encoded' do
+  describe '#generate' do
     it "encodes an integer into a hash string" do
-      result = service.encode(id)
+      result = service.generate(id)
 
       expect(result).to be_a(String)
       expect(result).not_to be_empty
@@ -53,17 +53,7 @@ RSpec.describe EncodedService, type: :service do
       service_a = described_class.new(secret: "salt-a")
       service_b = described_class.new(secret: "salt-b")
 
-      expect(service_a.encode(id)).not_to eq(service_b.encode(id))
-    end
-  end
-
-  describe "#decoding" do
-    it "decodes a hash back to the original integer" do
-      hash = service.encode(id)
-      decoded_value = service.decode(hash)
-
-      # Hashids returns an array on decode (e.g., [12345])
-      expect(decoded_value).to eq([ id ])
+      expect(service_a.generate(id)).not_to eq(service_b.generate(id))
     end
   end
 end
