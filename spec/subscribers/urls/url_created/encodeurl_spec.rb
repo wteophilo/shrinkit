@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Urls::UrlCreate::EncodeUrl do
+describe Urls::UrlCreated::EncodeUrl do
   describe '.handles_event' do
     it 'registers to handle the url.create.encode event' do
       expect(described_class.event_name).to eq 'url.create.encode'

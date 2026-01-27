@@ -1,5 +1,5 @@
 module Urls
-  module UrlCreate
+  module UrlCreated
     class EncodeUrl
       include DomainEvent::Subscriber
 
