@@ -57,7 +57,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # RSpec for Rails [https://rspec.info/documentation/]
-  gem "rspec-rails", "~> 8.0.0"
+  gem "rspec-rails", "~> 8.0.3"
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", "~> 13.0", platforms: %i[mri mingw x64_mingw]
